@@ -1,15 +1,15 @@
 # Bouncing ball
 
-## Setup
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+## Stackblitz
+https://stackblitz.com/github/yevheniizh/bouncing-ball
 
+## Local setup
 ``` bash
-# Install dependencies (only the first time)
+# Install dependencies
 npm install
 
-# Run the local server at localhost:8080
-npm run dev
+# Run the local server
+npm run start
 
 # Build for production in the dist/ directory
 npm run build

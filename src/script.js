@@ -23,7 +23,7 @@ const debug = {
     gui: null,
     init: () => {
         debug.gui = new dat.GUI()
-        debug.gui.add(debug, 'reset')
+        debug.gui.add(debug, 'reset').name('Reset')
     },
     reset: () => {
         debug.gui.destroy();
@@ -35,7 +35,7 @@ const debug = {
         state.objects.splice(0, state.objects.length)
 
         debug.init();
-        debug.onReset(); // define at the end
+        debug.onReset(); // NOTE: defined at the end of the file
     },
 }
 debug.init();
@@ -159,7 +159,7 @@ const createSphere = (radius, position) => {
 const initSphere = () => {
     const sphere = createSphere( 1, { x: 0, y: 5, z: -state.stareHeight * 0.75 } );
     sphere.body.applyLocalForce(new CANNON.Vec3(0, 0, 150), new CANNON.Vec3(0, 0, 0))
-    debug.gui.add(sphere.body, 'mass').min(0.5).max(5).step(0.001).name('Sphere mass')
+    debug.gui.add(sphere.body, 'mass').min(0.5).max(5).step(0.001).name('Ball mass')
 }
 
 initSphere();
